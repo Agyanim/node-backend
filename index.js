@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(cors());
 // this is a based url used with routes
 app.use("/api/email/notification", emailNotification);
+app.use("/api/counselor", emailNotification);
 app.use(others);
 
 
