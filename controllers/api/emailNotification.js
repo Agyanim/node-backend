@@ -1,5 +1,5 @@
-const CounselorInfo=require("../model/counselors/counselorInfo.js")
-let { emailNotification } = require("../data");
+const CounselorInfo=require("../../model/counselors/counselorInfo.js")
+let { emailNotification } = require("../../data");
 //this handles that get request 
 const getEmail = async (req, res) => {
 const displayCounslorInfo=await CounselorInfo.find({})

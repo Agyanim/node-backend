@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const {getEmail,sendEmail,updateEmail}=require("../controllers/emailNotification")
+const {getEmail,sendEmail,updateEmail}=require("../controllers/api/emailNotification")
 
-router.get("/",getEmail )
-router.post("/", sendEmail);
-router.put("/:id",updateEmail );
+router.get("/api/counselor",getEmail )
+router.post("/api/counselor", sendEmail);
+router.put("/api/counselor/:id",updateEmail );
 
 module.exports=router

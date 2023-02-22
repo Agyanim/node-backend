@@ -1,4 +1,4 @@
-const CounselorInfo = require("../../model/counselors/counselorInfo");
+const CounselorInfo = require("../../../model/counselors/counselorInfo");
 
 const insertIntoCounselorInfo = async () => {
   await CounselorInfo.create({
