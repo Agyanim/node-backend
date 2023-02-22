@@ -1,7 +1,9 @@
+const CounselorInfo=require("../model/counselors/counselorInfo.js")
 let { emailNotification } = require("../data");
 //this handles that get request 
-const getEmail = (req, res) => {
-  res.status(200).json({ success: true, data: emailNotification });
+const getEmail = async (req, res) => {
+const displayCounslorInfo=await CounselorInfo.find({})
+  res.status(200).json({ success: true, data: displayCounslorInfo });
 };
 // This handles the post request
 const sendEmail = (req, res) => {
