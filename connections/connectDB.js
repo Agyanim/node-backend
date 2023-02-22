@@ -3,7 +3,7 @@ mongoose.set('strictQuery', true)
 const dbConnect = async ()=>{
     try {
         await mongoose.connect(
-            "mongodb://localhost:27017",
+            "mongodb://localhost:27017/bbs_db",
             {
               useUnifiedTopology: true,
               useNewUrlParser: true,
