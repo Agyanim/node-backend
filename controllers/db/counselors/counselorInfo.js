@@ -1,25 +1,22 @@
 const CounselorInfo = require("../../../model/counselors/counselorInfo");
 
-const insertIntoCounselorInfo = async () => {
+const insertIntoCounselorInfo = async (data) => {
   await CounselorInfo.create({
-    fName: "Robert ",
-    lName: "Lamptey",
-    dob: "19/12/1986",
-    telephon: "0245789685",
+    fName: data.fName,
+    lName: data.lName,
+    gender: data.gender,
+    dob: new Date(data.dob),
+    location: data.location,
+    telephone: data.telephone,
   });
 };
 
-
-
-
-
-
-const display = async () => {
+const displayCounselors = async () => {
   try {
     const displayCounslorInfo = await CounselorInfo.find({});
-
-    console.log(displayCounslorInfo);
+    // console.log(displayCounslorInfo);
+    return displayCounslorInfo;
   } catch (error) {}
 };
 
-module.exports = { insertIntoCounselorInfo, display };
+module.exports = { insertIntoCounselorInfo, displayCounselors };
